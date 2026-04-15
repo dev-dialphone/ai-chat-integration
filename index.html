@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Intelligent Assistant | Dialphone Integration</title>
+    <meta name="description" content="Deploying a state-of-the-art AI chatbot integration with Dialphone. Experience the future of customer support.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <div class="container fade-in">
+        <header class="hero">
+            <h1>Intelligent Support,<br>Reimagined.</h1>
+            <p class="subtitle delay-1">
+                Experience seamless interaction with our advanced AI chatbot. 
+                Optimized for performance, beauty, and human-like precision.
+            </p>
+            <div class="delay-2">
+                <button class="cta-button" onclick="window.chatOpen()">
+                    <span>Launch Chat Now</span>
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </header>
+
+        <section class="feature-grid delay-2">
+            <div class="glass-card">
+                <div class="card-icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3>Instant Response</h3>
+                <p>Reduced latency ensures your customers get the answers they need in milliseconds, not minutes.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-icon">
+                    <i data-lucide="shield"></i>
+                </div>
+                <h3>Secure by Design</h3>
+                <p>Enterprise-grade security protocols keep your data and conversations private and encrypted.</p>
+            </div>
+
+            <div class="glass-card">
+                <div class="card-icon">
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <h3>Natural Logic</h3>
+                <p>Powered by Dialphone AI, our assistant understands context and nuances better than ever before.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        &copy; 2026 AI INTI • POWERED BY DIALPHONE
+    </footer>
+
+    <!-- Chatbot Integration Script -->
+    <script
+        src="https://ai.dialphone.ai/embed.js"
+        data-agent-id="69de728bd07dc46d0adcbdce"
+        data-token="5303e08d-70ad-40c0-b73c-39d30a4e07ec"
+        data-integration-id="5c20cb03-b73d-4f68-be97-9e971f2b1cdd"
+        data-header-color="#111111"
+        data-bubble-background="#7c3aed"
+        data-bubble-text-color="#ffffff"
+        data-icon-color="#ffffff"
+        data-send-button-color="#7c3aed"
+        data-loader-color="#7c3aed"
+        async
+        type="text/javascript">
+    </script>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Helper to simulate interaction (if the widget exposes a global)
+        window.chatOpen = function() {
+            // Some widgets use window.DialphoneOpen or similar. 
+            // Since we don't know the exact API, we'll just alert or wait for the bubble.
+            console.log("Launching chat...");
+            // Standard behavior is often to look for the bubble element and click it
+            const bubble = document.querySelector('iframe[id*="dialphone"]');
+            if (bubble) {
+                // If it's an iframe, we might not be able to click inside easily from here.
+                // But usually, these scripts auto-mount a bubble.
+            }
+        };
+    </script>
+</body>
+</html>
